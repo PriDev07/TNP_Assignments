@@ -1,6 +1,16 @@
-# 27. Find the First Missing Positive: Find the smallest positive integer missing in the array.
+# 27. Find the First Missing Positive
+# Find smallest positive integer missing from array
 
-def findMissingPositive(arr):
-    ans =-1
-    # todo
-    return ans
+def firstMissingPositive(arr):
+    st = set(arr)
+    i = 1
+
+    while True:
+        if i not in st:
+            return i
+        i += 1
+
+
+arr = [3, 4, -1, 1]
+ans = firstMissingPositive(arr)
+print(ans)
